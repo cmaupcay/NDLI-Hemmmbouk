@@ -19,11 +19,11 @@
         <!-- Bootstrap core CSS -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
         <!-- Material Design Bootstrap -->
-        <link href="/?css=mdb.min" rel="stylesheet">
+        <link href="<?= __RACINE__ ?>/?css=mdb.min" rel="stylesheet">
 
         <!-- CSS Personnel -->
-        <link href="/?css=style" rel="stylesheet">
-        <link rel="shortcut icon" href="/?media=ui/logo.ico" type="image/x-icon">
+        <link href="<?= __RACINE__ ?>/?css=style" rel="stylesheet">
+        <link rel="shortcut icon" href="<?= __RACINE__ ?>/?media=ui/logo.ico" type="image/x-icon">
     </head>
     <body>
         <?php 
