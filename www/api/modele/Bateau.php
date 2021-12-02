@@ -1,8 +1,6 @@
 <?php
 include_once 'modele/ModeleBD.php';
 
-    include_once 'modele/Facture.php';
-
     class Bateau extends ModeleBD
     {
         public function informations(): array
