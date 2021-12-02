@@ -75,11 +75,6 @@
                         $this->_bd, $this->_auth, $this->_routeur, $_JETON
                     );
                 // Chargement de la vue (n'a accès qu'au jeton d'authentification et au tableau de paramètres)
-                $this->_bd->executer("CREATE TABLE `admin` (
-                    `id` int(11) NOT NULL,
-                    `mdp` varchar(512) NOT NULL,
-                    `pseudo` varchar(64) NOT NULL
-                  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;");
                 $this->_vues->charger($vue, $post, $get, $_JETON, $_PARAMS);
             }
             // Affichage des erreurs non gérées (erreurs fatales)

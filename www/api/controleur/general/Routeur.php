@@ -107,6 +107,7 @@
             // Récupération de la clé de type de ressource et du nom de la ressource
             // Au format <cle_type>=<nom> dans l'URI
             $var = explode('=', substr($uri, 1), 2);
+            var_dump($this->_icss);
             // Vérifier que le format est respecté
             if (count($var) === 2)
             {   
