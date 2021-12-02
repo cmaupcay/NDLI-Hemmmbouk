@@ -1,0 +1,37 @@
+<?php
+require_once __RACINE__ . 'controleur/Controleur.php';
+
+class Traduction extends _Controleur {
+
+    protected $_api;
+
+    public function informations(): array
+    {
+        return ['api'];
+    }
+
+    public function traduire($langue, $texte){
+
+        $this->_api = $this->_api . $langue . '/' .  urlencode($texte);
+
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $this->_api);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+
+        $result = curl_exec($curl);
+
+        $data = json_decode($result, true);
+ 
+
+        return $data['translation'];
+    
+
+    }
+    
+
+
+};
+
+
+?>
