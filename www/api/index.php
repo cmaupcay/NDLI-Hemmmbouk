@@ -1,7 +1,13 @@
 <?php
-    $racine =  __DIR__ . '\\';
+    $racine =  __DIR__ . '/';
     if (!is_dir($racine))
-        $racine = 'www\\' . __DIR__ . '\\';
+    {
+        $racine = explode('/', __DIR__);
+        array_pop($racine);
+        $racine[] = 'www';
+        $racine[] = 'api';
+        $racine = implode('/', $racine);
+    }
     define('__RACINE__', $racine);
     unset($racine);
     var_dump(__RACINE__);
