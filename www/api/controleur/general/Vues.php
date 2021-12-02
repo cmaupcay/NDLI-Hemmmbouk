@@ -37,7 +37,6 @@
             $_V = $this;
             $trad = new Traduction("ini/trad.ini");
 
-
             if ($_JETON === null) $_JETON = new JetonAuthentification();
             $post = []; $get = [];                              // POST et GET ne peuvent pas être utilisés dans les vues.
             if (isset($_PARAMS[URI])) unset($_PARAMS[URI]);     // De même, on efface les informations relatives à l'URI.

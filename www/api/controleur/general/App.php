@@ -56,7 +56,18 @@
         {
             try 
             {
-                $_PARAMS = ['oui']; // Tableau des paramètres passés à la vue et partagé entre les controleurs
+                $_PARAMS = [TEXT => [
+                    NAV => [
+                        RECHERCHE_PH => "Rechercher", 
+                        CATEGORIES => [
+                            SAUVETEURS_PH => "Sauveteurs", 
+                            LEPORT_PH => "Le Port", 
+                            HISTOIRE_PH => "Histoire", 
+                            ANNEXE_PH => "Annexe"
+                            ]
+                        ]
+                    ]
+                ]; // Tableau des paramètres passés à la vue et partagé entre les controleurs
 
                 // Récupèration du jeton d'authentification
                 $_JETON = $this->_auth->jeton($session, $post, $cookie, $server['REMOTE_ADDR'], $this->_bd);   

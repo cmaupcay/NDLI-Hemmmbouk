@@ -18,4 +18,27 @@
 
     // Traduction
     const TEXT = 't';
+
+    // Barre de navigation
+    const NAV = "n";
+
+
+    // placeholder de la recherche dans la barre de navigation
+    const RECHERCHE_PH = "r_ph";
+
+    // tableau concernant les catégories de la barre de navigation
+    const CATEGORIES = "c";
+
+    // placeholder sauveteurs dans la barre de navigation 
+    const SAUVETEURS_PH = "s_ph";
+
+    // placeholder sauveteurs dans la barre de navigation
+    const LEPORT_PH = "lp_ph";
+
+    // placeholder histoire dans la barre de navigation
+    const HISTOIRE_PH = "h_ph";
+
+    // placeholder annexe dans la barre de navigation
+    const ANNEXE_PH = "a_ph";
+
 ?>
