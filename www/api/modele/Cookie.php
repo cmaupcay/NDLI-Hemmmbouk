@@ -1,5 +1,5 @@
 <?php
-    include_once 'modele/ModeleBD.php';
+    require_once 'modele/ModeleBD.php';
 
     class Cookie extends ModeleBD
     {

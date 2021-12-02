@@ -1,5 +1,5 @@
 <?php
-    include_once 'modele/BD.php';
+    require_once 'modele/BD.php';
 
     abstract class ModeleBD extends Modele
     {

@@ -3,7 +3,5 @@
         NOM_PAGE => 'Accueil'
     ]);
 
-    $_V->composant('vehicules', $_JETON, [VEHICULE => $_PARAMS[VEHICULE]]);
-
     $_V->composant('pied', $_JETON);
 ?>

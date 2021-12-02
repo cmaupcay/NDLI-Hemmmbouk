@@ -1,5 +1,5 @@
 <?php
-    include_once 'modele/Utilisateur.php';
+    require_once 'modele/Utilisateur.php';
 
     class JetonAuthentification extends Utilisateur
     {

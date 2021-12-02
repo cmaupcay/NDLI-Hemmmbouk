@@ -1,5 +1,5 @@
 <?php
-    include_once 'controleur/Controleur.php';
+    require_once 'controleur/Controleur.php';
 
     class Routeur extends _Controleur
     {
@@ -63,6 +63,7 @@
         // Chargement d'un fichier
         private function _charger_fichier(string $fichier, ?string $type = null)
         {
+            $fichier = __RACINE__ . $fichier;
             if (strlen($fichier) > 0 && $fichier[-1] !== '/' && file_exists($fichier))
             {
                 // Changer le type MIME du contenu
@@ -70,7 +71,7 @@
                     header('Content-type: ' . mime_content_type($fichier));
                 else 
                     header('Content-type: ' . $type);
-                include $fichier;
+                require $fichier;
                 die();
             }
         }
@@ -187,7 +188,7 @@
                     // Vérifier que le fichier existe
                     if (!file_exists($fichier)) throw null;
                     // Inclure le fichier
-                    require_once $fichier;
+                    require_once __RACINE__ .  $fichier;
                     // Instancier le Controleur dans le tableau
                     $c[] = new $n();
                 }

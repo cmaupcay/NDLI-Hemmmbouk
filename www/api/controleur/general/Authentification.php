@@ -1,7 +1,7 @@
 <?php
-    require_once 'controleur/Controleur.php';
-    include_once 'modele/JetonAuthentification.php';
-    include_once 'modele/Cookie.php';
+    require_once __RACINE__ .  'controleur/Controleur.php';
+    require_once 'modele/JetonAuthentification.php';
+    require_once 'modele/Cookie.php';
 
     class Authentification extends _Controleur
     {

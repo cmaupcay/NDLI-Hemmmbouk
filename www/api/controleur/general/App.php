@@ -1,7 +1,7 @@
 <?php
-    require_once 'controleur/general/Vues.php';
-    require_once 'controleur/general/Routeur.php';
-    require_once 'controleur/general/Authentification.php';
+    require_once __RACINE__ .  'controleur/general/Vues.php';
+    require_once __RACINE__ .  'controleur/general/Routeur.php';
+    require_once __RACINE__ .  'controleur/general/Authentification.php';
 
     class App extends _Controleur
     {
