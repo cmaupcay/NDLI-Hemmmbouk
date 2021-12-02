@@ -4,6 +4,7 @@
         $racine = 'www\\' . __DIR__ . '\\';
     define('__RACINE__', $racine);
     unset($racine);
+    var_dump(__RACINE__);
 
     require_once __RACINE__ .  'controleur/general/App.php';
 
