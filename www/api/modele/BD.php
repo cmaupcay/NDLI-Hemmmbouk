@@ -40,7 +40,12 @@
                     ':host=' . $this->_domaine .
                     (($this->_port !== null) ? ';port=' . $this->_port : '') .
                     ';dbname=' . $this->_base,
-                    $this->_id, $mdp
+                    $this->_id, $mdp,
+                    [
+                        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+                        PDO::MYSQL_ATTR_SSL_CA => '/etc/pki/tls/certs/ca-bundle.crt',
+                        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false
+                    ]
                 );
             }
             catch (\PDOException $err)                                  // Erreur de connexion
