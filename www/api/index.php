@@ -1,7 +1,9 @@
 <?php
-    define('__RACINE__', __DIR__ . '\\');
-    if (!is_dir(__RACINE__))
-        define('__RACINE__', 'www\\' . __DIR__ . '\\');    
+    $racine =  __DIR__ . '\\';
+    if (!is_dir($racine))
+        $racine = 'www\\' . __DIR__ . '\\';
+    define('__RACINE__', $racine);
+    unset($racine);
 
     require_once __RACINE__ .  'controleur/general/App.php';
 
