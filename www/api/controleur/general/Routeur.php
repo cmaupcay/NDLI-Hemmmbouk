@@ -139,6 +139,7 @@
         // Définition de la vue selon l'URI
         public function definir_vue(string $uri, array &$params) : string
         {
+            $uri = str_replace('www/api/', '', $uri); // Pour localhost
             // Retirer le premier '/'
             $uri = substr($uri, 1);
             // Si la requête est vide, renvoyer à la page par défaut
