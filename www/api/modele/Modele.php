@@ -57,7 +57,7 @@
 
         public function depuis_ini(string $fichier_ini = null, bool $effacer = true, array $ignorer = []) : ?array
         {
-            if (!($ini = parse_ini_file($fichier_ini)))
+            if (!($ini = parse_ini_file(__RACINE__ .  $fichier_ini)))
                 throw new Exception("Impossible d\'initialiser le modèle depuis le fichier \"$fichier_ini.");
             $this->depuis_tableau($ini, $effacer, $ignorer);
             return $ini;
