@@ -1,5 +1,5 @@
 <?php
-    require_once 'modele/BD.php';
+    require_once __RACINE__ . 'modele/BD.php';
 
     abstract class ModeleBD extends Modele
     {

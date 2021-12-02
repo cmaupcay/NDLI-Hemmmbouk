@@ -1,6 +1,6 @@
 <?php
-    require_once 'modele/Modele.php';
-    require_once 'ini/params.ini.php';
+    require_once __RACINE__ . 'modele/Modele.php';
+    require_once __RACINE__ . 'ini/params.ini.php';
 
     // Classe de base de la classe Controleur et des controleurs centraux (cf. App).
     // Cette classe est une extension de Modèle car elle utilise la fonction depuis_ini dans

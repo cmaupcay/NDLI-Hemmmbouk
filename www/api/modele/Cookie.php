@@ -1,5 +1,5 @@
 <?php
-    require_once 'modele/ModeleBD.php';
+    require_once __RACINE__ . 'modele/ModeleBD.php';
 
     class Cookie extends ModeleBD
     {

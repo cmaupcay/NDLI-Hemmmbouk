@@ -1,5 +1,5 @@
 <?php
-    require_once 'modele/Modele.php';
+    require_once __RACINE__ . 'modele/Modele.php';
 
     class BD extends Modele
     {

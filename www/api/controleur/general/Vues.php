@@ -1,5 +1,5 @@
 <?php
-    require_once 'controleur/Controleur.php';
+    require_once __RACINE__ . 'controleur/Controleur.php';
 
     class Vues extends _Controleur
     {
