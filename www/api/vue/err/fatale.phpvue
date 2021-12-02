@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eMotorsport - Erreur fatale</title>
+    <link href="/?css=erreur" rel="stylesheet">
+</head>
+<body>
+    <div class="erreur-fatale">
+        <h3>Une erreur est survenue...</h3>
+        <h4 onclick="window.history.back()">⇚ Retour</h4>
+    </div>
+</body>
+</html>

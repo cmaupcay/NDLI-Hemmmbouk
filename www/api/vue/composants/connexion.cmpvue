@@ -1,0 +1,28 @@
+<?php if (isset($_PARAMS, $_JETON)): ?>
+    <?php if (!$_JETON->valide()): ?>
+        <form method="post" class="row">
+            <div class="col-4">
+                <input class="form-control mb-2" type="text" name="<?= Authentification::CLE_ID_CONNEXION ?>" id="<?= Authentification::CLE_ID_CONNEXION ?>" required
+                value="<?= $_JETON->pseudo() ?? '' ?>">
+                <label class="form-label" for="<?= Authentification::CLE_ID_CONNEXION ?>">Pseudo</label>
+            </div>
+            <div class="col-4">
+                <input class="form-control mb-2" type="password" name="<?= Authentification::CLE_MDP ?>" id="<?= Authentification::CLE_MDP ?>" required>
+                <label class="form-label" for="<?= Authentification::CLE_MDP ?>">Mot de passe</label>
+            </div>
+            <div class="col-4">
+                <button class="btn d-block w-100 py-2 my-1" type="submit" name="<?= Authentification::FORMULAIRE ?>">Se connecter</button>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="checkbox" name="<?= Authentification::CLE_COOKIE ?>" id="<?= Authentification::CLE_COOKIE ?>" checked>
+                    <label class="form-label" for="<?= Authentification::CLE_COOKIE ?>">Rester connecté</label>
+                </div>
+            </div>
+        </form>
+        <?php if ($_JETON->pseudo() !== null): ?>
+            <p class="text-center m-0"><i class="fa fa-exclamation-triangle me-2"></i> Identifiants incorrects.</p>
+        <?php endif ?>
+    <?php endif ?>
+    
+<?php else: ?>
+    <h3><strong>Problème lors du chargement du composant...</strong></h3>
+<?php endif ?>
