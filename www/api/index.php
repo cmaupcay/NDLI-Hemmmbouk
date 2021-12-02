@@ -1,5 +1,6 @@
 <?php
     $racine =  __DIR__ . '/';
+    var_dump(scandir(__DIR__));
     if (!is_dir($racine))
     {
         $racine = explode('/', __DIR__);
