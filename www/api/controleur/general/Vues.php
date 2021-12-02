@@ -1,5 +1,5 @@
 <?php
-    require_once __RACINE__ . 'controleur/Controleur.php';
+    require_once __RACINE__ . 'controleur/general/Traduction.php';
 
     class Vues extends _Controleur
     {
@@ -35,6 +35,9 @@
         public function charger(string $vue, array &$post, array &$get, ?JetonAuthentification $_JETON = null, array $_PARAMS = [])
         {
             $_V = $this;
+            $trad = new Traduction("ini/trad.ini");
+
+
             if ($_JETON === null) $_JETON = new JetonAuthentification();
             $post = []; $get = [];                              // POST et GET ne peuvent pas être utilisés dans les vues.
             if (isset($_PARAMS[URI])) unset($_PARAMS[URI]);     // De même, on efface les informations relatives à l'URI.

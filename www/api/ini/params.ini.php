@@ -15,4 +15,7 @@
 
     // Modèles
     const UTILISATEUR = 'u';
+
+    // Traduction
+    const TEXT = 't';
 ?>
