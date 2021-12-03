@@ -23,6 +23,6 @@
 
 .obscur
 {
-    filter: brightness(0.4);
+    filter: brightness(0.8);
     transition: all 0.2s ease-in;
 }

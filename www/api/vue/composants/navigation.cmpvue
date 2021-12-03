@@ -36,7 +36,7 @@
                         <?php endif ?>
                         <div class="col-6 col-md-4 pb-2">
                             <form method="post">
-                                <button class="btn d-block w-100" name="<?= DARK_MODE ?>" type="submit">
+                                <button onclick="ya_plusDeblank_je_croitptetrepasûr('page')"class="btn d-block w-100" name="<?= DARK_MODE ?>" type="submit">
                                     <?= isset($_PARAMS[DARK_MODE]) ?
                                         '<i class="fas fa-sun mr-2"></i>Mode jour' :
                                         '<i class="fas fa-moon mr-2"></i>Mode nuit'
