@@ -5,10 +5,6 @@
 
 ?>
 
-<form method="post">
-    <input type="search" name="q" id="q" placeholder="<?= $_PARAMS[TEXT][NAV][RECHERCHE_PH] ?>">
-</form>
-
 <?php
     $_V->composant('pied', $_JETON, $_PARAMS);
 ?>

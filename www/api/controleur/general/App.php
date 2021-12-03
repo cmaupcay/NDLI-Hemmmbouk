@@ -60,11 +60,12 @@
                     TEXT => [
                         NAV => [
                             RECHERCHE_PH => "Rechercher", 
-                            CATEGORIES => [
-                                SAUVETEURS_PH => "Sauveteurs", 
-                                LEPORT_PH => "Le Port", 
-                                HISTOIRE_PH => "Histoire", 
-                                ANNEXE_PH => "Annexe"
+                            MENU => [
+                                ['Accueil', 'fas fa-home', ''],
+                                ['Sauveteurs', 'fas fa-home', 'sauveteurs/'],
+                                ['Victimes', 'fas fa-home', 'victimes/'],
+                                ['Bateaux', 'fas fa-home', 'bateaux/'],
+                                ['Mots-croisés', '', 'jeu/']
                             ]
                         ]
                     ]

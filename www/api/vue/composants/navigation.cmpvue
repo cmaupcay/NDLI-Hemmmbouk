@@ -3,17 +3,25 @@
         <div class="row">
             <div id="logo" class="col-12 col-lg-5">
                 <h1 onclick="document.location = '/'">
-                    <i class="fab fa-sith"></i>
+                    <i class="fas fa-anchor"></i>
                     SADK
                 </h1>
-                <h5 class="font-italic"><b>Location professionnelle pour les professionels</b></h5>
+                <h5 class="font-italic mt-4"><b>Les sauveteurs du dunkerquois</b></h5>
             </div>
             <div id="menu" class="col-12 col-lg-7">
                 <div class="pr-4">
                     <div class="row">
-                        <div class="col-6 col-md-4 pb-2">
-                            <button class="btn d-block w-100" type="button" onclick="document.location = '/'"><i class="fas fa-home mr-2"></i>Accueil</button>
-                        </div>
+                        <?php
+                            foreach ($_PARAMS[TEXT][NAV][MENU] as $btn)
+                            {
+                                print('
+                                    <div class="col-6 col-md-4 pb-2">
+                                        <button class="btn d-block w-100" type="button"
+                                        onclick="document.location = \'' . $btn[2] . '\'"><i class="' . $btn[1] . ' mr-2"></i>' . $btn[0] . '</button>
+                                    </div>
+                                ');
+                            }
+                        ?>
                         <?php if ($_JETON !== null && $_JETON->valide()): ?>
                             <?php if ($_JETON->est_du_role('admin')): ?>
                                 <div class="col-6 col-md-4 pb-2">
@@ -38,6 +46,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="recherche" class="col-12">
+                <?php $_V->composant('recherche', $_JETON, $_PARAMS); ?>
             </div>
         </div>
     </nav>

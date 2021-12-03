@@ -1,0 +1,7 @@
+<?php if (isset($_PARAMS)): ?>
+    <form method="post" class="px-2 py-3">
+        <input type="search" class="form-control" name="q" id="q" placeholder="<?= $_PARAMS[TEXT][NAV][RECHERCHE_PH] ?>">
+    </form>
+<?php else: ?>
+    <h3><strong>Problème lors du chargement du composant...</strong></h3>
+<?php endif ?>
