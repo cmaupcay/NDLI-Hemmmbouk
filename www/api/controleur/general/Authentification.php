@@ -74,7 +74,7 @@
         {
             if (isset($post[self::FORMULAIRE], $post[self::CLE_ID_CONNEXION], $post[self::CLE_MDP]))
             {
-                ($u = new Utilisateur())->depuis_tableau([$this->_identifiant => $post[self::CLE_ID_CONNEXION]]);
+                ($u = new Admin())->depuis_tableau([$this->_identifiant => $post[self::CLE_ID_CONNEXION]]);
                 if ($u->existe($bd, $this->_identifiant))      // L'utilisateur existe dans la base de données
                 {
                     $mdp = $u->mdp($bd, $this->_identifiant);

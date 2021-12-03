@@ -15,7 +15,7 @@
         {
             foreach ($data as &$v)                                                  // Encodage en UTF-8
                 if (is_string($v))  $v = utf8_encode($v);
-            $infos = $this->informations();                                         // Chargement des informations du modèle
+            $infos = $this->informations();
             $reussi = false;
             self::_formater_ignorer($ignorer);
             foreach ($infos as $info) 
