@@ -6,7 +6,7 @@ include_once __RACINE__ . 'modele/Article.php';
     {
 	public $article;
         public function informations(): array
-        { return ['idBateau', 'nomBateau']; }
+        { return ['idBateau', 'nomBateau', 'idArticle']; }
 		public function table() : string { return 'bateau'; }
 
         public function __construct(?int $id = null, ?BD &$bd = null)
