@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 02 déc. 2021 à 22:22
+-- Généré le : ven. 03 déc. 2021 à 01:21
 -- Version du serveur : 10.4.21-MariaDB
 -- Version de PHP : 8.0.12
 
@@ -35,6 +35,25 @@ CREATE TABLE `admin` (
 
 -- --------------------------------------------------------
 
+CREATE TABLE `categorie` (
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Structure de la table `article`
+--
+
+CREATE TABLE `article` (
+  `idArticle` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `texte` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`texte`)),
+  `image` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`image`)),
+  `categorie` int(11) NOT NULL,
+  `dateCreation` datetime NOT NULL,
+  `dateMAJ` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
 --
 -- Structure de la table `bateau`
 --
@@ -59,16 +78,18 @@ CREATE TABLE `cookie` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `sauve`
+-- Structure de la table `victime`
 --
 
-CREATE TABLE `sauve` (
-  `idSauve` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `nomSauve` varchar(40) NOT NULL,
-  `prenomSauve` varchar(40) NOT NULL,
+CREATE TABLE `victime` (
+  `idVictime` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nomVictime` varchar(40) NOT NULL,
+  `prenomVictime` varchar(40) NOT NULL,
   `age` int(11) NOT NULL,
   `sexe` varchar(1) NOT NULL,
-  `idSauveteur` int(11) NOT NULL
+  `decede` boolean NOT NULL,
+  `idSortie` int(11) NOT NULL,
+  `idArticle` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -82,5 +103,19 @@ CREATE TABLE `sauveteur` (
   `nomSauveteur` varchar(40) NOT NULL,
   `prenomSauveteur` varchar(40) NOT NULL,
   `Poste` varchar(30) NOT NULL,
-  `idBateau` int(11) NOT NULL
+  `idBateau` int(11) NOT NULL,
+  `idArticle` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `sortie`
+--
+
+CREATE TABLE `sortie` (
+  `idSortie` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `date` datetime NOT NULL,
+  `infos` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`infos`)),
+  `idArticle` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
