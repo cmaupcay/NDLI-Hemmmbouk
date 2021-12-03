@@ -69,7 +69,8 @@
                         ]
                     ]
                 ]; // Tableau des paramètres passés à la vue et partagé entre les controleurs
-                $session[LANGUE] = 'fr';
+                if (isset($post[LANGUE])) $session[LANGUE] = $post[LANGUE];
+                else $session[LANGUE] = 'fr';
 
                 // Récupèration du jeton d'authentification
                 $_JETON = $this->_auth->jeton($session, $post, $cookie, $server['REMOTE_ADDR'], $this->_bd);   

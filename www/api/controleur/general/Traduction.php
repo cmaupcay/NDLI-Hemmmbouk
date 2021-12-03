@@ -36,7 +36,10 @@ class Traduction extends _Controleur {
         }
     }
 
-
+    public function langues() : array
+    {
+        
+    }
 };
 
 
