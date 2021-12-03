@@ -14,8 +14,11 @@
     const REC_REPONSE = 'r_a';
 
     // Modèles
-    const UTILISATEUR = 'u';
-
+    const BATEAU = 'b';
+    const SAUVETEUR = 'sau';
+    const SORTIE = 'sor';
+    const VICTIME = 'v';
+    
     // Traduction
     const TEXT = 't';
 
