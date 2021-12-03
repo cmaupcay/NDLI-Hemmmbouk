@@ -12,6 +12,19 @@ Déploiement vercel
 ==
 
 
+Création de vercel
+-
+
+Rendez vous sur le site vercel.com et créez un nouveau projet.
+
++ Sélectionnez "import Third Party Git Repository"
++ indiquez l'url du repository github
++ validez
+
+Modification du Fichier BD.ini
+-
+
+
 
 Spécifications défis secondaires
 ==
