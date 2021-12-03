@@ -18,6 +18,7 @@
     const SAUVETEUR = 'sau';
     const SORTIE = 'sor';
     const VICTIME = 'v';
+    const ARTICLE = 'ar';
     
     // Traduction
     const LANGUE = 'l';
