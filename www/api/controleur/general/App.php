@@ -69,6 +69,8 @@
                         ]
                     ]
                 ]; // Tableau des paramètres passés à la vue et partagé entre les controleurs
+
+                
                 if (isset($post[LANGUE])) $session[LANGUE] = $post[LANGUE];
                 else $session[LANGUE] = 'fr';
 
@@ -91,6 +93,7 @@
                     
                 $trad = new Traduction("ini/trad.ini");
                 $trad->traduire_page($session, $_PARAMS[TEXT]);
+                $trad->langues();
                 // Chargement de la vue (n'a accès qu'au jeton d'authentification et au tableau de paramètres)
                 $this->_vues->charger($vue, $post, $get, $_JETON, $_PARAMS);
             }
