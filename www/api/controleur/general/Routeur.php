@@ -184,13 +184,13 @@
             foreach ($c_noms as $n)
             {
                 // Transformer le nom de controleur en nom de fichier
-                $fichier = 'controleur/' . $n . '.php';
+                $fichier = __RACINE__ . 'controleur/' . $n . '.php';
                 try
                 {
                     // Vérifier que le fichier existe
                     if (!file_exists($fichier)) throw null;
                     // Inclure le fichier
-                    require_once __RACINE__ .  $fichier;
+                    require_once $fichier;
                     // Instancier le Controleur dans le tableau
                     $c[] = new $n();
                 }
