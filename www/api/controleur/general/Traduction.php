@@ -39,6 +39,18 @@ class Traduction extends _Controleur {
     public function langues() : array
     {
         
+        $curl = curl_init();
+
+        curl_setopt($curl, CURLOPT_URL, "https://lingva.ml/api/v1/languages");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+        $result = curl_exec($curl);
+
+        $data = json_decode($result, true);
+
+        return $data;
+
+
     }
 };
 
