@@ -35,10 +35,6 @@ CREATE TABLE `admin` (
 
 -- --------------------------------------------------------
 
-CREATE TABLE `categorie` (
-
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 --
 -- Structure de la table `article`
 --
@@ -60,7 +56,8 @@ CREATE TABLE `article` (
 
 CREATE TABLE `bateau` (
   `idBateau` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `nomBateau` int(11) NOT NULL
+  `nomBateau` int(11) NOT NULL,
+  `idArticle` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -103,7 +100,6 @@ CREATE TABLE `sauveteur` (
   `nomSauveteur` varchar(40) NOT NULL,
   `prenomSauveteur` varchar(40) NOT NULL,
   `Poste` varchar(30) NOT NULL,
-  `idBateau` int(11) NOT NULL,
   `idArticle` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
