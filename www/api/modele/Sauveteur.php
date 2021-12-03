@@ -3,12 +3,15 @@ include_once 'modele/ModeleBD.php';
 
     class Sauveteur extends ModeleBD
     {
+	public $article;
         public function informations(): array
         { return ['idSauveteur', 'nomSauveteur', 'prenomSauveteur', 'Poste', 'idBateau']; }
 		public function table() : string { return 'sauveteur'; }
 
         public function __construct(?int $id = null, ?BD &$bd = null)
-        { parent::__construct($id, $bd); }
+        { parent::__construct($id, $bd);
+	  this.article = new Article();
+	}
 		
         
         private $nomSauveteur;
@@ -26,4 +29,5 @@ include_once 'modele/ModeleBD.php';
 		private $idBateau;
         public function idBateau() : ?int { return $this->idBateau; }
         public function modifier_idBateau(?int $valeur) { $this->idBateau = $valeur; }
+    }
 ?>
