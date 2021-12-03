@@ -12,7 +12,8 @@ include_once __RACINE__ . 'modele/Article.php';
         public function __construct(?int $id = null, ?BD &$bd = null)
         {
             parent::__construct($id, $bd);
-	        $this->article = new Article($this->_idArticle, $bd);
+	        if (!isset($this->_idArticle))
+                $this->article = new Article($this->_idArticle, $bd);
 	    }
         
         private $_nomVictime;

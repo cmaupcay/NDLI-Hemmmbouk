@@ -10,8 +10,9 @@ class Traduction extends _Controleur {
         return ['api'];
     }
 
-    public function traduire($langue, $texte){
-
+    public function traduire(string $langue, string $texte) : string
+    {
+        if ($langue === 'fr') return $texte;
         $this->_api = $this->_api . $langue . '/' .  urlencode($texte);
 
         $curl = curl_init();
@@ -20,15 +21,20 @@ class Traduction extends _Controleur {
 
 
         $result = curl_exec($curl);
+        $data = json_decode($result, true); 
 
-        $data = json_decode($result, true);
- 
-
-        return $data['translation'];
-    
-
+        if (isset($data['translation'])) return $data['translation'];
+        return $texte;
     }
-    
+
+    public function traduire_page(array &$session, array &$texte)
+    {
+        foreach ($texte as $nom => &$txt)
+        {
+            if (is_array($txt)) $this->traduire_page($session, $txt);
+            else $texte[$nom] = $this->traduire($session[LANGUE], $txt);
+        }
+    }
 
 
 };
