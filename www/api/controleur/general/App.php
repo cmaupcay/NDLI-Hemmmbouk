@@ -3,7 +3,7 @@
     require_once __RACINE__ .  'controleur/general/Routeur.php';
     require_once __RACINE__ .  'controleur/general/Authentification.php';
 
-    $_SERVER['SERVER_ADDR'] = 'https://hemmmbouk.vercel.app';
+    $_SERVER['SERVER_ADDR'] = 'hemmmbouk.vercel.app';
 
     class App extends _Controleur
     {
