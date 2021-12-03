@@ -12,6 +12,19 @@ Déploiement vercel
 ==
 
 
+Création de vercel
+-
+
+Rendez vous sur le site vercel.com et créez un nouveau projet.
+
++ Sélectionnez "import Third Party Git Repository"
++ Indiquez l'url du repository github
++ Validez
+
+Modification du Fichier BD.ini
+-
+
+
 
 Spécifications défis secondaires
 ==
@@ -19,7 +32,7 @@ Spécifications défis secondaires
 ### Défi VIVERIS : World Wide
 
 
-la fonctionnalité de traduction se fait via l'utilisation de l'api de lingva dans le fichier Traduction.php
+La fonctionnalité de traduction se fait via l'utilisation de l'api de lingva dans le fichier Traduction.php
 
 La traductuion fonctionne de la manière suivante:
 + une liste permet de changer la langue du site
