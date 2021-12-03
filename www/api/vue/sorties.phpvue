@@ -1,0 +1,7 @@
+<?php
+    $_V->composant('entete', $_JETON, [
+        NOM_PAGE => 'Sorties en mer'
+    ]);
+
+    $_V->composant('pied', $_JETON);
+?>

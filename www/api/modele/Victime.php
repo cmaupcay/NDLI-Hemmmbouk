@@ -20,7 +20,7 @@ include_once __RACINE__ . 'modele/Article.php';
         public function modifier_nomVictime(?string $valeur) { $this->_nomVictime = $valeur; }
 		
 		private $_prenomVictime;
-        public function prenomVictime() : ?string { return $this->_prenomVictime; }
+        public function prenomVictime() : ?string { return $this->_prenomVictime; } 
         public function modifier_prenomVictime(?string $valeur) { $this->_prenomVictime = $valeur; }
 		
 		private $_age;
