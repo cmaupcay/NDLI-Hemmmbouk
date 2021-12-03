@@ -10,7 +10,7 @@ include_once 'modele/ModeleBD.php';
 
         public function __construct(?int $id = null, ?BD &$bd = null)
         { parent::__construct($id, $bd);
-	  this.article = new Article();
+	  $this.article = new Article($this->idArticle, $bd);
 	}
 		
         
@@ -29,5 +29,9 @@ include_once 'modele/ModeleBD.php';
 		private $idBateau;
         public function idBateau() : ?int { return $this->idBateau; }
         public function modifier_idBateau(?int $valeur) { $this->idBateau = $valeur; }
+	    
+	    private $idArticle;
+        public function idArticle() : ?int { return $this->idArticle; }
+        public function modifier_idArticle(?int $valeur) { $this->idArticle = $valeur; }
     }
 ?>
