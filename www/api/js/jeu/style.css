@@ -1,0 +1,43 @@
+.mot-croise{
+    margin:auto;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    overflow: auto;
+}
+
+div.case {
+    position: absolute;
+    display: flex;
+    outline: 1px solid black;
+    background: white;
+    width: var(--cellSize);
+    height: var(--cellSize);
+}
+
+input.case {
+    border: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0;
+    font-size: 80%;
+    text-transform: uppercase;
+}
+
+.mot-croise-description-title{
+    text-transform: uppercase;
+    font-size:1.6em;
+}
+
+.mot-croise-definitions{
+    padding:2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.case-indice{
+    left: 0;
+    top: 0;
+    position: absolute;
+}

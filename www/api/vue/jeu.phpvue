@@ -1,0 +1,20 @@
+<?php
+    $_V->composant('entete', $_JETON, [
+        NOM_PAGE => 'Mots-croisés',
+    ] + $_PARAMS);
+
+?>
+
+    <div id="jeu" class="row mb-5 text-center">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <h3>Mots-croisés</h3>
+            <?php require_once __RACINE__ . 'js/jeu/index.php'; ?>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+<?php
+
+    $_V->composant('pied', $_JETON, $_PARAMS);
+?>

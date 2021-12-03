@@ -3,7 +3,7 @@
     require_once __RACINE__ . 'modele/Bateau.php';
     require_once __RACINE__ . 'modele/Sauveteur.php';
     require_once __RACINE__ . 'modele/Sortie.php';
-    require_once __RACINE__ . 'modele/Bateau.php';
+    require_once __RACINE__ . 'modele/Victime.php';
 
     class Recherche extends Controleur
     {

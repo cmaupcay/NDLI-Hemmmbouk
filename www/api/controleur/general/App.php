@@ -62,10 +62,10 @@
                             RECHERCHE_PH => "Rechercher", 
                             MENU => [
                                 ['Accueil', 'fas fa-home', ''],
-                                ['Sauveteurs', 'fas fa-home', 'sauveteurs/'],
-                                ['Victimes', 'fas fa-home', 'victimes/'],
-                                ['Bateaux', 'fas fa-home', 'bateaux/'],
-                                ['Mots-croisés', '', 'jeu/']
+                                ['Sauveteurs', 'fab fa-watchman-monitoring', 'sauveteurs/'],
+                                ['Victimes', 'fas fa-baby', 'victimes/'],
+                                ['Bateaux', 'fas fa-ship', 'bateaux/'],
+                                ['Mots-croisés', 'fas fa-border-top', 'jeu/']
                             ]
                         ]
                     ]
