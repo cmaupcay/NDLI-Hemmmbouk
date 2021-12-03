@@ -1,5 +1,9 @@
 <?php
     require_once __RACINE__ . 'controleur/Controleur.php';
+    require_once __RACINE__ . 'modele/Bateau.php';
+    require_once __RACINE__ . 'modele/Sauveteur.php';
+    require_once __RACINE__ . 'modele/Sortie.php';
+    require_once __RACINE__ . 'modele/Bateau.php';
 
     class Recherche extends Controleur
     {
@@ -16,8 +20,8 @@
 
             $res[BATEAU] = (new Bateau())->selection($_BD, null, 'nomBateau LIKE "' . $requete . '"');
             $res[SAUVETEUR] = (new Sauveteur())->selection($_BD, null, '(nomSauveteur LIKE "' . $requete . '" OR prenomSauveteur LIKE "' . $requete . '" OR Poste LIKE "' . $requete . '")');
-            $res[SORTIE] = (new Bateau())->selection($_BD, null, 'nomBateau LIKE \"' . $requete . "\"");
-            $res[VICTIME] = (new Bateau())->selection($_BD, null, 'nomBateau LIKE \"' . $requete . "\"");
+            $res[SORTIE] = (new Sortie())->selection($_BD, null, 'nomBateau LIKE \"' . $requete . "\"");
+            $res[VICTIME] = (new Victime())->selection($_BD, null, 'nomBateau LIKE \"' . $requete . "\"");
 
             return $res;
         }

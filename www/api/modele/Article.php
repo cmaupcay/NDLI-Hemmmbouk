@@ -11,25 +11,25 @@ include_once __RACINE__ . 'modele/ModeleBD.php';
         { parent::__construct($id, $bd); }
 		
         
-        private $categorie;
-        public function categorie() : ?string { return $this->categorie; }
-        public function modifier_categorie(?string $valeur) { $this->categorie = $valeur; }
+        private $_categorie;
+        public function categorie() : ?string { return $this->_categorie; }
+        public function modifier_categorie(?string $valeur) { $this->_categorie = $valeur; }
 		
-		private $dateCreation;
-        public function dateCreation() : ?string { return ($this->dateCreation === null) ? null : $this->dateCreation->format('Y-m-d'); }
-		public function DT_dateCreation() : ?DateTime { return $this->dateCreation; }
-        public function modifierDateCreation(?string $valeur) { $this->DateCreation = new DateTime($valeur); }
+		private $_dateCreation;
+        public function dateCreation() : ?string { return ($this->_dateCreation === null) ? null : $this->_dateCreation->format('Y-m-d'); }
+		public function DT_dateCreation() : ?DateTime { return $this->_dateCreation; }
+        public function modifierDateCreation(?string $valeur) { $this->_dateCreation = new DateTime($valeur); }
 		
-		private $dateMAJ;
-        public function dateMAJ() : ?string { return ($this->dateMAJ === null) ? null : $this->dateMAJ->format('Y-m-d'); }
-		public function DT_dateMAJ() : ?DateTime { return $this->dateMAJ; }
-        public function modifierdateMAJ(?string $valeur) { $this->dateMAJ = new DateTime($valeur); }
+		private $_dateMAJ;
+        public function dateMAJ() : ?string { return ($this->_dateMAJ === null) ? null : $this->_dateMAJ->format('Y-m-d'); }
+		public function DT_dateMAJ() : ?DateTime { return $this->_dateMAJ; }
+        public function modifierdateMAJ(?string $valeur) { $this->_dateMAJ = new DateTime($valeur); }
 		
-		private $texte;
-        public function texte() : ?array { return $this->texte; }
-        public function modifier_texte(?string $valeur) { $this->texte = json_decode($valeur, true); }
+		private $_texte;
+        public function texte() : ?array { return $this->_texte; }
+        public function modifier_texte(?string $valeur) { $this->_texte = json_decode($valeur, true); }
 		
-		private $image;
-        public function image() : ?array { return $this->image; }
-        public function modifier_image(?string $valeur) { $this->image = json_decode($valeur, true); }
+		private $_image;
+        public function image() : ?array { return $this->_image; }
+        public function modifier_image(?string $valeur) { $this->_image = json_decode($valeur, true); }
     }

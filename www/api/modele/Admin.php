@@ -10,11 +10,11 @@ include_once __RACINE__ . 'modele/ModeleBD.php';
         public function __construct(?int $id = null, ?BD &$bd = null)
         { parent::__construct($id, $bd); }
 		
-        private $mdp;
-        public function mdp() : ?string { return $this->mdp; }
-        public function modifier_mdp(?string $valeur) { $this->mdp = $valeur; }
+        private $_mdp;
+        public function mdp() : ?string { return $this->_mdp; }
+        public function modifier_mdp(?string $valeur) { $this->_mdp = $valeur; }
 		
-		private $pseudo;
-        public function pseudo() : ?string { return $this->pseudo; }
-        public function modifier_pseudo(?string $valeur) { $this->pseudo = $valeur; }
+		private $_pseudo;
+        public function pseudo() : ?string { return $this->_pseudo; }
+        public function modifier_pseudo(?string $valeur) { $this->_pseudo = $valeur; }
     }

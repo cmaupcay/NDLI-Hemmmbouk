@@ -15,7 +15,11 @@ include_once __RACINE__ . 'modele/Article.php';
 	        $this->article = new Article($this->idArticle, $bd);
     	}
 		
-        private $nomBateau;
-        public function nomBateau() : ?string { return $this->nomBateau; }
-        public function modifier_nomBateau(?string $valeur) { $this->nomBateau = $valeur; }
+        private $_nomBateau;
+        public function nomBateau() : ?string { return $this->_nomBateau; }
+        public function modifier_nomBateau(?string $valeur) { $this->_nomBateau = $valeur; }
+        
+        private $_idArticle;
+        public function idArticle() : ?int { return $this->_idArticle; }
+        public function modifier_idArticle(?int $valeur) { $this->_idArticle = $valeur; }
     }

@@ -12,36 +12,36 @@ include_once __RACINE__ . 'modele/Article.php';
         public function __construct(?int $id = null, ?BD &$bd = null)
         {
             parent::__construct($id, $bd);
-	        $this->article = new Article($this->idArticle, $bd);
+	        $this->article = new Article($this->_idArticle, $bd);
 	    }
         
-        private $nomVictime;
-        public function nomVictime() : ?string { return $this->nomVictime; }
-        public function modifier_nomVictime(?string $valeur) { $this->nomVictime = $valeur; }
+        private $_nomVictime;
+        public function nomVictime() : ?string { return $this->_nomVictime; }
+        public function modifier_nomVictime(?string $valeur) { $this->_nomVictime = $valeur; }
 		
-		private $prenomVictime;
-        public function prenomVictime() : ?string { return $this->prenomVictime; }
-        public function modifier_prenomVictime(?string $valeur) { $this->prenomVictime = $valeur; }
+		private $_prenomVictime;
+        public function prenomVictime() : ?string { return $this->_prenomVictime; }
+        public function modifier_prenomVictime(?string $valeur) { $this->_prenomVictime = $valeur; }
 		
-		private $age;
-        public function age() : ?int { return $this->age; }
-        public function modifier_age(?int $valeur) { $this->age = $valeur; }
+		private $_age;
+        public function age() : ?int { return $this->_age; }
+        public function modifier_age(?int $valeur) { $this->_age = $valeur; }
 		
-		private $sexe;
-        public function sexe() : ?string { return $this->sexe; }
-        public function modifier_sexe(?string $valeur) { $this->sexe = $valeur; }
+		private $_sexe;
+        public function sexe() : ?string { return $this->_sexe; }
+        public function modifier_sexe(?string $valeur) { $this->_sexe = $valeur; }
 	
-        private $decede;
-        public function decede() : ?bool { return $this->decede; }
-        public function modifier_decede(?bool $valeur) { $this->decede = $valeur; }
+        private $_decede;
+        public function decede() : ?bool { return $this->_decede; }
+        public function modifier_decede(?bool $valeur) { $this->_decede = $valeur; }
 	
-        private $idSortie;
-        public function idSortie() : ?int { return $this->idSortie; }
-        public function modifier_idSortie(?int $valeur) { $this->idSortie = $valeur; }
+        private $_idSortie;
+        public function idSortie() : ?int { return $this->_idSortie; }
+        public function modifier_idSortie(?int $valeur) { $this->_idSortie = $valeur; }
         
-        private $idArticle;
-        public function idArticle() : ?int { return $this->idArticle; }
-        public function modifier_idArticle(?int $valeur) { $this->idArticle = $valeur; }
+        private $_idArticle;
+        public function idArticle() : ?int { return $this->_idArticle; }
+        public function modifier_idArticle(?int $valeur) { $this->_idArticle = $valeur; }
 	}
 		
 ?>

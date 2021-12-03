@@ -6,7 +6,7 @@ include_once __RACINE__ . 'modele/Article.php';
     {
 	public $article;
         public function informations(): array
-        { return ['id', 'nomSauveteur', 'prenomSauveteur', 'Poste', 'idBateau', 'idArticle']; }
+        { return ['id', 'nomSauveteur', 'prenomSauveteur', 'Poste', 'idArticle']; }
 		public function table() : string { return 'sauveteur'; }
 
         public function __construct(?int $id = null, ?BD &$bd = null)
@@ -16,24 +16,20 @@ include_once __RACINE__ . 'modele/Article.php';
 	    }
 		
         
-        private $nomSauveteur;
-        public function nomSauveteur() : ?string { return $this->nomSauveteur; }
-        public function modifier_nomSauveteur(?string $valeur) { $this->nomSauveteur = $valeur; }
+        private $_nomSauveteur;
+        public function nomSauveteur() : ?string { return $this->_nomSauveteur; }
+        public function modifier_nomSauveteur(?string $valeur) { $this->_nomSauveteur = $valeur; }
 		
-		private $prenomSauveteur;
-        public function prenomSauveteur() : ?string { return $this->prenomSauveteur; }
-        public function modifier_prenomSauveteur(?string $valeur) { $this->prenomSauveteur = $valeur; }
+		private $_prenomSauveteur;
+        public function prenomSauveteur() : ?string { return $this->_prenomSauveteur; }
+        public function modifier_prenomSauveteur(?string $valeur) { $this->_prenomSauveteur = $valeur; }
 		
-		private $Poste;
-        public function Poste() : ?string { return $this->Poste; }
-        public function modifier_Poste(?string $valeur) { $this->Poste = $valeur; }
+		private $_Poste;
+        public function Poste() : ?string { return $this->_Poste; }
+        public function modifier_Poste(?string $valeur) { $this->_Poste = $valeur; }
 		
-		private $idBateau;
-        public function idBateau() : ?int { return $this->idBateau; }
-        public function modifier_idBateau(?int $valeur) { $this->idBateau = $valeur; }
-	    
-	    private $idArticle;
-        public function idArticle() : ?int { return $this->idArticle; }
-        public function modifier_idArticle(?int $valeur) { $this->idArticle = $valeur; }
+	    private $_idArticle;
+        public function idArticle() : ?int { return $this->_idArticle; }
+        public function modifier_idArticle(?int $valeur) { $this->_idArticle = $valeur; }
     }
 ?>
