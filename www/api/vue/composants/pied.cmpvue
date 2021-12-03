@@ -16,10 +16,11 @@
                 <i class="fab fa-twitter-square"></i>
             </div>
         </div>
+        <div class="d-inline-grid px-3 align-items-center pt-3">
+            <?php if (!isset($_PARAMS[FORM_CONNEXION]) || $_PARAMS[FORM_CONNEXION] === true) $_V->composant('connexion', $_JETON); ?>
+        </div>
         <div class="row py-2">
-            <div class="col-4"><b>Clément PROST</b></div>
-            <div class="col-4"><b>Robin FAUCHERY</b></div>
-            <div class="col-4"><b>Clément MAUPERON</b></div>
+            <div class="col-12"><b>Les HEMMMBOUK</b></div>
         </div>
     </footer>
 
@@ -31,10 +32,10 @@
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="<?= __RACINE__ ?>/?js=mdb.min"></script>
+    <script type="text/javascript"><?= require_once __RACINE__ . "js/mdb.min.js" ?></script>
     
     <!-- ACTION -->
-    <script type="text/javascript" src="<?= __RACINE__ ?>/?js=action"></script>
+    <script type="text/javascript"><?= require_once __RACINE__ . "js/action.js" ?></script>
 </body>
 </html>
 <?php else: ?>

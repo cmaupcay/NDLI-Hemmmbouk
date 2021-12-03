@@ -1,7 +1,7 @@
 <?php
     $_V->composant('entete', $_JETON, [
-        NOM_PAGE => 'Accueil'
-    ]);
+        NOM_PAGE => 'Accueil',
+    ] + $_PARAMS);
 
 ?>
 

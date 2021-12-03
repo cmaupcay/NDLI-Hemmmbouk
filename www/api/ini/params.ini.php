@@ -8,6 +8,7 @@
     // Entête
     const NOM_PAGE = 'np';
     const FORM_CONNEXION = 'form_connexion';
+    const DARK_MODE = 'dm';
 
     // Recherche
     const REC_REQUETE = 'q';

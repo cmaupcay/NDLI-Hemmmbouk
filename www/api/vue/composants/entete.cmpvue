@@ -19,15 +19,19 @@
         <!-- Bootstrap core CSS -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
         <!-- Material Design Bootstrap -->
-        <link href="<?= __RACINE__ ?>/?css=mdb.min" rel="stylesheet">
+        <style><?php require_once __RACINE__ . 'vue/style/mdb.min.css' ?></style>
 
         <!-- CSS Personnel -->
-        <link href="<?= __RACINE__ ?>/?css=style" rel="stylesheet">
+        <style><?php
+            if (isset($_PARAMS[DARK_MODE])) require_once __RACINE__ . 'vue/style/couleurs-dark.css';
+            else require_once __RACINE__ . 'vue/style/couleurs.css';
+        ?></style>
+        <style><?php require_once __RACINE__ . 'vue/style/style.css' ?></style>
         <link rel="shortcut icon" href="<?= __RACINE__ ?>/?media=ui/logo.ico" type="image/x-icon">
     </head>
     <body>
         <?php 
-            $_V->composant('navigation', $_JETON, isset($_PARAMS[FORM_CONNEXION]) ? [FORM_CONNEXION => $_PARAMS[FORM_CONNEXION]] : []);
+            $_V->composant('navigation', $_JETON, $_PARAMS);
         ?>
         <main id="page" class="container-fluid">
 <?php else: ?>

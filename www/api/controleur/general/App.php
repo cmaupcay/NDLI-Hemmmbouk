@@ -94,6 +94,13 @@
                 $trad = new Traduction("ini/trad.ini");
                 $trad->traduire_page($session, $_PARAMS[TEXT]);
                 $trad->langues();
+
+                if (isset($post[DARK_MODE]))
+                {
+                    if (isset($session[DARK_MODE])) unset($session[DARK_MODE]);
+                    else $session[DARK_MODE] = true;
+                }
+                if (isset($session[DARK_MODE])) $_PARAMS[DARK_MODE] = true;
                 // Chargement de la vue (n'a accès qu'au jeton d'authentification et au tableau de paramètres)
                 $this->_vues->charger($vue, $post, $get, $_JETON, $_PARAMS);
             }
