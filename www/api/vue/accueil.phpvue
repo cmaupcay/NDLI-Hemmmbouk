@@ -10,6 +10,5 @@
 </form>
 
 <?php
-
-    $_V->composant('pied', $_JETON);
+    $_V->composant('pied', $_JETON, $_PARAMS);
 ?>

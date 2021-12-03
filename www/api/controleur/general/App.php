@@ -93,7 +93,7 @@
                     
                 $trad = new Traduction("ini/trad.ini");
                 $trad->traduire_page($session, $_PARAMS[TEXT]);
-                $trad->langues();
+                $_PARAMS[LANGUE] = $trad->langues();
 
                 if (isset($post[DARK_MODE]))
                 {

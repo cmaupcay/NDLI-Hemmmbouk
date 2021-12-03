@@ -48,7 +48,7 @@ class Traduction extends _Controleur {
 
         $data = json_decode($result, true);
 
-        return $data;
+        return $data['languages'];
 
 
     }

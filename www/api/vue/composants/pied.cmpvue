@@ -2,25 +2,24 @@
     </main>
 
     <footer class="text-center">
-        <div id="liens" class="row pt-1 pb-3">
-            <div class="col-3" onclick="document.location = '#mail'">
-                <i class="fas fa-envelope-square"></i>
-            </div>
-            <div class="col-3" onclick="document.location = '#whatsapp'">
-                <i class="fab fa-whatsapp-square"></i>
-            </div>
-            <div class="col-3" onclick="document.location = '#facebook'">
-                <i class="fab fa-facebook-square"></i>
-            </div>
-            <div class="col-3" onclick="document.location = '#twitter'">
-                <i class="fab fa-twitter-square"></i>
-            </div>
-        </div>
-        <div class="d-inline-grid px-3 align-items-center pt-3">
+        <div class="d-inline-grid px-3 align-items-center pt-5">
+            <h3>Administration</h3>
             <?php if (!isset($_PARAMS[FORM_CONNEXION]) || $_PARAMS[FORM_CONNEXION] === true) $_V->composant('connexion', $_JETON); ?>
         </div>
-        <div class="row py-2">
-            <div class="col-12"><b>Les HEMMMBOUK</b></div>
+        <div class="row py-2 mt-5">
+            <div class="col-9"><b>Les HEMMMBOUK</b></div>
+            <div class="col-3">
+                <form method="post" class="d-inline-flex">
+                    <select name="<?= LANGUE ?>" id="<?= LANGUE ?>">
+                        <?php
+                            foreach ($_PARAMS[LANGUE] as $l)
+                                if ($l['code'] !== 'auto')
+                                    print('<option value="' . $l['code'] . '">' . $l['name'] . "</option>\n");                    
+                        ?>
+                    </select>
+                    <input class="btn" type="submit" value="Changer">
+                </form>
+            </div>
         </div>
     </footer>
 
