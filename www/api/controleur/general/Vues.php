@@ -35,7 +35,6 @@
         public function charger(string $vue, array &$post, array &$get, ?JetonAuthentification $_JETON = null, array $_PARAMS = [])
         {
             $_V = $this;
-            $trad = new Traduction("ini/trad.ini");
 
             if ($_JETON === null) $_JETON = new JetonAuthentification();
             $post = []; $get = [];                              // POST et GET ne peuvent pas être utilisés dans les vues.

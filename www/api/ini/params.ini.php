@@ -20,6 +20,7 @@
     const VICTIME = 'v';
     
     // Traduction
+    const LANGUE = 'l';
     const TEXT = 't';
 
     // Barre de navigation

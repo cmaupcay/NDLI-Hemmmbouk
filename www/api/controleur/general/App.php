@@ -56,18 +56,20 @@
         {
             try 
             {
-                $_PARAMS = [TEXT => [
-                    NAV => [
-                        RECHERCHE_PH => "Rechercher", 
-                        CATEGORIES => [
-                            SAUVETEURS_PH => "Sauveteurs", 
-                            LEPORT_PH => "Le Port", 
-                            HISTOIRE_PH => "Histoire", 
-                            ANNEXE_PH => "Annexe"
+                $_PARAMS = [
+                    TEXT => [
+                        NAV => [
+                            RECHERCHE_PH => "Rechercher", 
+                            CATEGORIES => [
+                                SAUVETEURS_PH => "Sauveteurs", 
+                                LEPORT_PH => "Le Port", 
+                                HISTOIRE_PH => "Histoire", 
+                                ANNEXE_PH => "Annexe"
                             ]
                         ]
                     ]
                 ]; // Tableau des paramètres passés à la vue et partagé entre les controleurs
+                $session[LANGUE] = 'fr';
 
                 // Récupèration du jeton d'authentification
                 $_JETON = $this->_auth->jeton($session, $post, $cookie, $server['REMOTE_ADDR'], $this->_bd);   
@@ -85,7 +87,9 @@
                         $server, $session, $post, $get, $_PARAMS,
                         $this->_bd, $this->_auth, $this->_routeur, $_JETON
                     );
-
+                    
+                $trad = new Traduction("ini/trad.ini");
+                $trad->traduire_page($session, $_PARAMS[TEXT]);
                 // Chargement de la vue (n'a accès qu'au jeton d'authentification et au tableau de paramètres)
                 $this->_vues->charger($vue, $post, $get, $_JETON, $_PARAMS);
             }
