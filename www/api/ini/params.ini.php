@@ -22,7 +22,6 @@
     // Barre de navigation
     const NAV = "n";
 
-
     // placeholder de la recherche dans la barre de navigation
     const RECHERCHE_PH = "r_ph";
 

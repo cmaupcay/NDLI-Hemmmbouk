@@ -4,19 +4,18 @@ include_once __RACINE__ . 'modele/Article.php';
 
     class Bateau extends ModeleBD
     {
-	public $article;
+	    public $article;
         public function informations(): array
-        { return ['idBateau', 'nomBateau', 'idArticle']; }
+        { return ['id', 'nomBateau', 'idArticle']; }
 		public function table() : string { return 'bateau'; }
 
         public function __construct(?int $id = null, ?BD &$bd = null)
-        { parent::__construct($id, $bd);
-	  $this->article = new Article();
-	}
+        { 
+            parent::__construct($id, $bd);
+	        $this->article = new Article($this->idArticle, $bd);
+    	}
 		
-        
         private $nomBateau;
         public function nomBateau() : ?string { return $this->nomBateau; }
         public function modifier_nomBateau(?string $valeur) { $this->nomBateau = $valeur; }
     }
-?>

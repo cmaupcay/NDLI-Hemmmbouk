@@ -12,6 +12,8 @@
 
         static public function rechercher(string $requete) : array
         {
-            return [];
+            $res = [];
+            
+            return $res;
         }
     }

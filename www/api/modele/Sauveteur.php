@@ -5,13 +5,14 @@ include_once 'modele/ModeleBD.php';
     {
 	public $article;
         public function informations(): array
-        { return ['idSauveteur', 'nomSauveteur', 'prenomSauveteur', 'Poste', 'idBateau', 'idArticle']; }
+        { return ['id', 'nomSauveteur', 'prenomSauveteur', 'Poste', 'idBateau', 'idArticle']; }
 		public function table() : string { return 'sauveteur'; }
 
         public function __construct(?int $id = null, ?BD &$bd = null)
-        { parent::__construct($id, $bd);
-	  $this.article = new Article($this->idArticle, $bd);
-	}
+        { 
+            parent::__construct($id, $bd);
+	        $this->article = new Article($this->idArticle, $bd);
+	    }
 		
         
         private $nomSauveteur;

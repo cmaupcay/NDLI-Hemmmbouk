@@ -50,5 +50,3 @@
             return setcookie($nom, 0, 1, $chemin) && $reussi;
         }
     }
-
-?>

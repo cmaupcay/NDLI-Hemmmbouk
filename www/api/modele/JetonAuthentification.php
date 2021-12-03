@@ -1,7 +1,7 @@
 <?php
-    require_once __RACINE__ . 'modele/Utilisateur.php';
+    require_once __RACINE__ . 'modele/Admin.php';
 
-    class JetonAuthentification extends Utilisateur
+    class JetonAuthentification extends Admin
     {
         private const CLE_ROLE = 'role';
         private const SEP_ROLE = ',';
@@ -41,5 +41,3 @@
             else $this->_roles = [];
         }
     }
-
-?>

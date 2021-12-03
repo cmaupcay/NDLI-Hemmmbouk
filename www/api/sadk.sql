@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 CREATE TABLE `article` (
-  `idArticle` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `texte` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`texte`)),
   `image` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`image`)),
   `categorie` int(11) NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE `article` (
 --
 
 CREATE TABLE `bateau` (
-  `idBateau` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `nomBateau` int(11) NOT NULL,
   `idArticle` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -79,7 +79,7 @@ CREATE TABLE `cookie` (
 --
 
 CREATE TABLE `victime` (
-  `idVictime` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `nomVictime` varchar(40) NOT NULL,
   `prenomVictime` varchar(40) NOT NULL,
   `age` int(11) NOT NULL,
@@ -96,7 +96,7 @@ CREATE TABLE `victime` (
 --
 
 CREATE TABLE `sauveteur` (
-  `idSauveteur` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `nomSauveteur` varchar(40) NOT NULL,
   `prenomSauveteur` varchar(40) NOT NULL,
   `Poste` varchar(30) NOT NULL,
@@ -110,7 +110,7 @@ CREATE TABLE `sauveteur` (
 --
 
 CREATE TABLE `sortie` (
-  `idSortie` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `date` datetime NOT NULL,
   `infos` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`infos`)),
   `idArticle` int(11) NOT NULL

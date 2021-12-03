@@ -1,10 +1,10 @@
 <?php
-include_once 'modele/ModeleBD.php';
+include_once __RACINE__ . 'modele/ModeleBD.php';
 
     class Article extends ModeleBD
     {
         public function informations(): array
-        { return ['idArticle', 'texte', 'image', 'categorie', 'dateCreation', 'dateMAJ']; }
+        { return ['id', 'texte', 'image', 'categorie', 'dateCreation', 'dateMAJ']; }
 		public function table() : string { return 'article'; }
 
         public function __construct(?int $id = null, ?BD &$bd = null)
@@ -32,4 +32,4 @@ include_once 'modele/ModeleBD.php';
 		private $image;
         public function image() : ?array { return $this->image; }
         public function modifier_image(?string $valeur) { $this->image = json_decode($valeur, true); }
-?>
+    }
