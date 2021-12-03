@@ -1,5 +1,6 @@
 <?php
-include_once 'modele/ModeleBD.php';
+include_once __RACINE__ . 'modele/ModeleBD.php';
+include_once __RACINE__ . 'modele/Article.php';
 
     class Victime extends ModeleBD
     {

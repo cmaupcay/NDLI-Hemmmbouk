@@ -1,5 +1,5 @@
 <?php
-include_once 'modele/ModeleBD.php';
+include_once __RACINE__ . 'modele/ModeleBD.php';
 
     class Admin extends ModeleBD
     {
