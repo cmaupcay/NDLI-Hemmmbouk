@@ -143,3 +143,12 @@ button{
 }
 
 /*=============== FOOTER ===============*/
+.grid-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+}
