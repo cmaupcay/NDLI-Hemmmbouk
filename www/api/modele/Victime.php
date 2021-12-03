@@ -37,6 +37,10 @@ include_once 'modele/ModeleBD.php';
 	private $idSortie;
         public function idSortie() : ?int { return $this->idSortie; }
         public function modifier_idSortie(?int $valeur) { $this->idSortie = $valeur; }
+	
+	private $idSortie;
+        public function idSortie() : ?int { return $this->idSortie; }
+        public function modifier_idSortie(?int $valeur) { $this->idSortie = $valeur; }
 	}
 		
 ?>
