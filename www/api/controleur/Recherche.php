@@ -20,8 +20,15 @@
 
             $res[BATEAU] = (new Bateau())->selection($_BD, null, 'nomBateau LIKE "' . $requete . '"');
             $res[SAUVETEUR] = (new Sauveteur())->selection($_BD, null, '(nomSauveteur LIKE "' . $requete . '" OR prenomSauveteur LIKE "' . $requete . '" OR Poste LIKE "' . $requete . '")');
-            $res[SORTIE] = (new Sortie())->selection($_BD, null, 'nomBateau LIKE \"' . $requete . "\"");
-            $res[VICTIME] = (new Victime())->selection($_BD, null, 'nomBateau LIKE \"' . $requete . "\"");
+            $res[SORTIE] = (new Sortie())->selection($_BD, null);
+            foreach ($res[SORTIE] as $i => $e)
+                foreach ($e->infos() as $val)
+                    if (!str_contains($val, $requete))
+                    {
+                        unset($res[SORTIE][$i]);
+                        break;
+                    }
+            $res[VICTIME] = (new Victime())->selection($_BD, null, '(nomVictime LIKE "' . $requete . '" OR prenomVictime LIKE "' . $requete . '")');
 
             return $res;
         }

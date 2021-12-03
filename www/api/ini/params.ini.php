@@ -10,8 +10,8 @@
     const FORM_CONNEXION = 'form_connexion';
 
     // Recherche
-    const REC_REQUETE = 'r_q';
-    const REC_REPONSE = 'r_a';
+    const REC_REQUETE = 'q';
+    const REC_REPONSE = 'a';
 
     // Modèles
     const BATEAU = 'b';
