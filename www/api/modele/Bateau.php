@@ -18,4 +18,5 @@ include_once __RACINE__ . 'modele/Article.php';
         private $nomBateau;
         public function nomBateau() : ?string { return $this->nomBateau; }
         public function modifier_nomBateau(?string $valeur) { $this->nomBateau = $valeur; }
+    }
 ?>
