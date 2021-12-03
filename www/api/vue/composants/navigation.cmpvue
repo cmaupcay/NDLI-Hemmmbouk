@@ -4,7 +4,7 @@
             <div id="logo" class="col-12 col-lg-5">
                 <h1 onclick="document.location = '/'">
                     <i class="fab fa-sith"></i>
-                    eMotorsport
+                    SADK
                 </h1>
                 <h5 class="font-italic"><b>Location professionnelle pour les professionels</b></h5>
             </div>
