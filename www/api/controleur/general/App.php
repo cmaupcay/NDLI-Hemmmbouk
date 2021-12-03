@@ -85,6 +85,7 @@
                         $server, $session, $post, $get, $_PARAMS,
                         $this->_bd, $this->_auth, $this->_routeur, $_JETON
                     );
+
                 // Chargement de la vue (n'a accès qu'au jeton d'authentification et au tableau de paramètres)
                 $this->_vues->charger($vue, $post, $get, $_JETON, $_PARAMS);
             }
