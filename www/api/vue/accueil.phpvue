@@ -3,8 +3,8 @@
         NOM_PAGE => 'Accueil',
     ] + $_PARAMS);
 
-?>
+    if (isset($_PARAMS[REC_REPONSE]))
+        var_dump($_PARAMS[REC_REPONSE]);    
 
-<?php
     $_V->composant('pied', $_JETON, $_PARAMS);
 ?>

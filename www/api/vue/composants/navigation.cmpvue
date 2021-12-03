@@ -2,7 +2,7 @@
     <nav>
         <div class="row">
             <div id="logo" class="col-12 col-lg-5">
-                <h1 onclick="document.location = '/'">
+                <h1 onclick="document.location = 'https://<?= $_SERVER['SERVER_ADDR'] ?>'">
                     <i class="fas fa-anchor"></i>
                     SADK
                 </h1>

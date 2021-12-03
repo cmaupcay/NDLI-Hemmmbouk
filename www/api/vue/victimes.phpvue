@@ -1,7 +1,10 @@
 <?php
     $_V->composant('entete', $_JETON, [
         NOM_PAGE => 'Victimes'
-    ]);
+    ] + $_PARAMS);
 
-    $_V->composant('pied', $_JETON);
+    if (isset($_PARAMS[VICTIME]))
+        var_dump($_PARAMS[VICTIME]);   
+
+    $_V->composant('pied', $_JETON, $_PARAMS);
 ?>

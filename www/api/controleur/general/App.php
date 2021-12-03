@@ -61,11 +61,11 @@
                         NAV => [
                             RECHERCHE_PH => "Rechercher", 
                             MENU => [
-                                ['Accueil', 'fas fa-home', ''],
-                                ['Sauveteurs', 'fab fa-watchman-monitoring', 'sauveteurs/'],
-                                ['Victimes', 'fas fa-baby', 'victimes/'],
-                                ['Bateaux', 'fas fa-ship', 'bateaux/'],
-                                ['Mots-croisés', 'fas fa-border-top', 'jeu/']
+                                ['Accueil', 'fas fa-home', "https://". $_SERVER['SERVER_ADDR']],
+                                ['Sauveteurs', 'fab fa-watchman-monitoring', "https://" . $_SERVER['SERVER_ADDR'] . "/sauveteurs/"],
+                                ['Victimes', 'fas fa-baby', "https://" . $_SERVER['SERVER_ADDR'] . '/victimes/'],
+                                ['Bateaux', 'fas fa-ship', "https://" . $_SERVER['SERVER_ADDR'] . '/bateaux/'],
+                                ['Mots-croisés', 'fas fa-border-top', "https://" . $_SERVER['SERVER_ADDR'] . '/jeu/']
                             ]
                         ]
                     ]

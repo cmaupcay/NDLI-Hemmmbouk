@@ -1,7 +1,10 @@
 <?php
     $_V->composant('entete', $_JETON, [
         NOM_PAGE => 'Sorties en mer'
-    ]);
+    ] + $_PARAMS);
 
-    $_V->composant('pied', $_JETON);
+    if (isset($_PARAMS[SORTIE]))
+        var_dump($_PARAMS[SORTIE]);   
+
+    $_V->composant('pied', $_JETON, $_PARAMS);
 ?>
